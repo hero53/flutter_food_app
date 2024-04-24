@@ -8,16 +8,16 @@ class SlideOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: GlobalColors.mainColorLigth,
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 150,
               backgroundImage: AssetImage('assets/img/slide_1.jpg'),
             ),
-            SizedBox(height: 70),
-            Text(
+            const SizedBox(height: 70),
+            const Text(
               "Fresh Food",
               style: TextStyle(
                   fontSize: 26,
@@ -25,6 +25,17 @@ class SlideOne extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Poppins'),
             ),
+            const SizedBox(height: 10),
+            TextButton(
+              style: ButtonStyle(
+                foregroundColor:
+                    MaterialStateProperty.all<Color>(GlobalColors.mainWith),
+                backgroundColor:
+                    MaterialStateProperty.all<Color>(GlobalColors.mainColor),
+              ),
+              onPressed: () {},
+              child: const Text('TextButton'),
+            )
           ],
         ),
       ),
