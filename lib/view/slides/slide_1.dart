@@ -8,13 +8,23 @@ class SlideOne extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: GlobalColors.mainColorLigth,
-      body: Center(
+      body: const Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-              child: Image.asset('assets/img/slide_1.jpg'),
+              radius: 150,
+              backgroundImage: AssetImage('assets/img/slide_1.jpg'),
             ),
-            const Text("hello word"),
+            SizedBox(height: 70),
+            Text(
+              "Fresh Food",
+              style: TextStyle(
+                  fontSize: 26,
+                  letterSpacing: 0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Poppins'),
+            ),
           ],
         ),
       ),
