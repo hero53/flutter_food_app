@@ -7,7 +7,7 @@ class SlideOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: GlobalColors.mainColorLigth,
+      backgroundColor: GlobalColors.mainWith,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -33,7 +33,9 @@ class SlideOne extends StatelessWidget {
                 backgroundColor:
                     MaterialStateProperty.all<Color>(GlobalColors.mainColor),
               ),
-              onPressed: () {},
+              onPressed: () {
+                print('ok');
+              },
               child: const Text('TextButton'),
             )
           ],
